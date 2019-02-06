@@ -1,0 +1,274 @@
+
+body {
+    background-color: slategrey;
+    	background-image: url('../img/travel.jpeg');
+	background-size: cover;
+	background-position: center;
+}
+
+
+
+header{
+    text-align: center;
+}
+
+
+img{
+    max-width: 100%;
+}
+#b{
+    border-left: 2px solid #f6516a;
+    padding-left: 6px;
+    font-style: italic;
+    color: grey;
+    
+}
+
+#nav1{
+    position: relative;
+    text-align: right;
+    top: -320px;
+}
+
+#container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table{
+    border: 2px solid black;
+}
+
+
+main {
+    display: block;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 1em;
+    margin-top: 0.5em;
+    padding: 1em;
+    border-radius: 2em 0 2EM 0;
+    background-color: #FFFFFF;
+   opacity: 0.85;
+}
+
+main a{
+    background-color: lightblue;
+    border-radius: 1em;
+    color: black;
+    font-weight: bold;
+    padding: 0.5em;
+    text-decoration: none;
+    
+}
+
+footer{
+    text-align: center;
+}
+
+nav {
+    font-family: Georgia, "Times New Roman", sans-serif;
+    font-size: 1.25em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -1.5em;
+}
+
+
+nav ul {
+    padding: 0;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+
+nav li {
+    background-color: lightblue;;
+    border-radius: 2em;
+    list-style-type: none;
+    margin: 0.3em;
+    padding: 0.4em;
+}
+
+nav li a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#nav1{
+    float: right;
+    background-color: lightblue;
+    border-radius: 2em;
+    list-style-type: none;
+    margin: 0.3em;
+    padding: 0.4em;
+    padding: 0;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    top: -3px;
+}
+
+
+
+
+
+
+
+@media only screen and (min-width:710px) {
+    body{
+        background-color: aliceblue;
+    }
+    img{
+        display: block;
+    }
+    
+    #nav1{
+        display: block;
+    }
+    
+    main a{
+        background-color: lightcyan;
+    }
+    
+    #nav1{
+        position: relative;
+        top: -160px;
+    }
+    #nav1{
+        background-color: aliceblue;
+    }
+    
+   nav li {
+        background-color: darkblue;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+        width: 20%;
+    }
+    
+    
+    nav ul{
+        display: inline;
+
+    }
+
+    nav li a{
+        display: inline;
+    }
+    nav li {
+        display: inline;
+    }
+    
+    
+        nav li a:link {
+        color: #FFFFFF;
+    }
+    
+    nav li a:visited {
+        color: #ccccff;
+    }
+    
+    nav li a:hover {
+        color: orange;
+        font-style: italic;
+    }
+    
+    nav li a:active {
+        color: #6600CC;
+    }
+
+    h3{
+        color: black;
+        
+    }
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width:860px) {
+    
+    #nav1{
+        position: relative;
+        top: -200px;
+    }
+    body{
+        background-color: lightblue;
+    }
+   
+    form{
+        color: aliceblue;
+    }
+    
+    h2,h3{
+        color: aliceblue;
+    }
+    
+       nav ul {
+        margin: 0;
+        padding-left: 0.50%;
+        padding-right: 0.50%;
+    }
+    
+    nav li {
+        background-color: darkblue;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+        width: 20%;
+    }
+    #nav1{
+        background-color: lightblue;
+    }
+    nav li a {
+        display: inline-block;
+        padding: 0.7em;
+        text-shadow: 0.2em 0.1em #3d3d35;
+    }
+    /* styles used for the main division */
+    main {
+background-color: #1d1d1c;
+    }
+    /* styles used paragraphs inside main */
+    main p {
+        color: #ffffff;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+    
+        nav li a:link {
+        color: #FFFFFF;
+    }
+    
+    nav li a:visited {
+        color: #ccccff;
+    }
+    
+    nav li a:hover {
+        color: blue;
+        font-style: italic;
+    }
+    
+    nav li a:active {
+        color: #6600CC;
+    }
+    
+    table{
+        color: aliceblue;
+        border: 2px solid white;
+    }
+    header{
+        position: static;
+        
+    }
+}

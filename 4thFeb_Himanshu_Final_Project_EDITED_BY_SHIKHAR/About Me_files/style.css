@@ -1,0 +1,163 @@
+body {
+    background-color: grey;
+}
+
+nav {
+    font-family: Georgia, "Times New Roman", sans-serif;
+    font-size: 1.25em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -1.5em;
+}
+
+/* Style for padding and margins for unordered list */
+nav ul {
+    padding: 0;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+/* Style for nav li */
+nav li {
+    background-color: #9D9D93;
+    border-radius: 2em;
+    list-style-type: none;
+    margin: 0.3em;
+    padding: 0.4em;
+}
+/* Style for links inside nav */
+nav li a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+ header img{
+    display: none;
+}
+aside2{
+        background-color: #ffffff;
+        border-radius: 0 5em 5em 5em;
+        box-shadow: 1em 1em 1em #4c4f4d;
+        padding:1.5em;
+        margin: 1em;
+    }
+aside1{
+    background-color: #ffffff;
+        border-radius: 0 5em 5em 5em;
+        box-shadow: 1em 1em 1em #4c4f4d;
+        padding:1.5em;
+        margin: 1em;
+}
+h3{
+        text-align: center;
+    }
+footer {
+    font-size: .70em;
+    text-align: center;
+    margin-top: 2em;
+}
+
+nav li a:link {
+        color: #FFFFFF;
+    }
+    
+    nav li a:visited {
+        color: #ccccff;
+    }
+    
+    nav li a:hover {
+        color: blue;
+        font-style: italic;
+    }
+    
+    nav li a:active {
+        color: #6600CC;
+    }
+
+
+
+@media only screen and (min-width:610px) {
+    body{
+        background-color: azure;
+    }
+    
+    header img{
+        display: block;
+    }
+
+    th{
+        background-color: black;
+        color:white;
+    }
+    img{
+        display: block;
+    }
+    nav{
+        display: block;
+    }
+    h3{
+        display: block;
+        text-align: left;
+    }
+    nav{
+        display: inline;
+    }
+     nav ul{
+        display: inline;
+
+    }
+
+    nav li a{
+        display: inline;
+    }
+    nav li {
+        display: inline;
+    }
+
+}
+footer {
+    font-size: .70em;
+    text-align: center;
+    margin-top: 2em;
+}
+
+
+
+
+
+
+@media only screen and (min-width:860px) {
+    body{
+        background-color: bisque;
+    }
+    
+    header img{
+        display: block;
+    }
+
+    h3{
+        display: block;
+        text-align: left;
+    }
+    nav{
+
+    }
+    nav ul{
+        display: inline;
+
+    }
+
+    nav li a{
+        display: inline;
+    }
+    nav li {
+        display: inline;
+    }
+    
+    footer {
+    font-size: .70em;
+    text-align: center;
+    margin-top: 2em;
+}
+
+
+}

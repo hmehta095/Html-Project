@@ -1,0 +1,192 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <link rel="stylesheet" href="css/style.css">
+    <title>Home</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body onload="checkUser()">
+<div id="container">
+  <header>
+      <a href="index.html"><img src="logo.png" width="200px" height="auto" alt="travel logo"> </a>  
+  
+
+    <nav id="nav">
+        <ul>  <br><br>
+          <li> <a href="home.html"> Home </a>&nbsp; &nbsp;</li>
+          <li><a href="#about">About us</a> &nbsp;&nbsp;</li>
+           <li><a href="#service">Services</a> &nbsp;&nbsp;</li>
+          
+          <li><a href="#contact">Contact Us</a> &nbsp;&nbsp;</li>
+          
+      </ul>
+    </nav>
+    </header>
+    
+     <nav id = "nav1">
+       <p><a href="reg.html" id="regLink"> Register </a>&nbsp; &nbsp;<br><a href="mylist.html">My List</a> &nbsp;&nbsp;</p>
+        <input type="button" value="Logout" id="logout">
+    </nav>
+    <img src="travel.jpg">
+    <main id="about">
+          <h2>About Us</h2>
+           <p>Skyscanner is a leading global travel search site, a place where people are inspired to plan and book direct from millions of travel options at the best prices. <br>
+
+We are unbiased and free, which means that the 60 million people who use us every month can trust our comprehensive range of flight, hotel and car hire options. <br>
+
+Our secret is in our unique proprietary technology that connects people directly to everything the travel industry has to offer. We also power travel search for over 1200 partners through our Skyscanner for Business products. <br></p>
+<p id ="B">
+We’re a high-growth business with a simple aim: to inspire travellers around the world and make travel search as easy as possible through our world-class technology. <br></p>
+<p>
+
+Our highly-rated free mobile app has been downloaded over 70 million times. We’re global but local and our products are available in over 30 languages and 70 currencies.     <br>
+
+Founded in 2003, we employ over 900 staff, with offices in Barcelona, Beijing, Budapest, Edinburgh, Glasgow, London, Miami, Shenzhen, Singapore and Sofia. Skyscanner is part of the Ctrip group. <br>
+
+Skyscanner is always free for travellers and we never charge travellers commission. We work with our airline and online travel agent partners in a number of ways: some partners agree to give Skyscanner a commission for every booking made through us or for every time travellers visit a partner’s website. Other partners advertise on the Skyscanner website and app. We always make sure any adverts are labelled or separate from any search results so users know exactly what’s what.</p> 
+  </main> 
+   
+   <main id = "service">
+            <h2>Services: <br></h2> <h3> Click to book:</h3>
+            <p>
+                <a href ="hotel.html">Hotel</a> <br> <br>
+                <a href ="flight.html">Flight Ticket</a> <br><br>
+                <a href ="guide.html">Local Guide</a>
+                
+            </p>
+            
+        </main>
+   
+           <main id = "contact">
+           <h2>Contact Us.</h2>
+            
+            <p>Fill a Form, will give you call back ASAP. <br></p>
+            
+            
+            <form id = "contact" method="post" >
+                <label for="fName">First Name:</label><br>
+                <input type="text" name="fName" id="fName"> <br>
+                <label for="lName">Last Name:</label><br>
+                <input type="text" name="lName" id="lName"> <br>
+                <label for="email">Email:</label><br>
+                <input type="email" name="email" id="email"> <br>
+                <label for="phone">Phone:</label> <br>
+                <input type="tel" id="phone" name="phone"> <br>
+                
+                <label for="address">Address:</label> <br>
+                <textarea name="address" id="address" cols="25" rows="3"></textarea>
+                <br>
+                
+               <br>
+                 <br>
+                <label for="question">Any Questions?</label> <br>
+                <textarea name="question" id="questions" cols="25" rows="3"></textarea>
+                <br>
+                <input type="submit" id="sumbitReq" value="submit" class="btn">
+                <input type="reset" value="Reset Form" class="btn">
+            </form> <br>
+            <caption>Office Timmings:</caption>
+            <table border="2px">
+                <tr>
+                    <th>Mon-Thru</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                    <th>Sunday</th>    
+                </tr>
+                
+                <tr>
+                    <td>10AM-9PM</td>
+                    <td>10AM-6PM</td>
+                    <td>10AM-5PM</td>
+                    <td>CLOSED</td>
+                </tr>
+                
+            </table>
+              <p> * In holidays may it differs. </p>
+              <div id="listDiv">
+                  <ul>
+                      <li id="listOfReq"></li>
+                  </ul>
+              </div>
+            
+            <br><br>
+            <h3>Reach Us at:</h3>
+            <p>You can reach us at: <br>
+            77 Rakewood cresent <br>
+            Scarborough,Ontario <br>
+            M1V1M6 </p>
+            
+            <p>Phone Number <br><br>
+            <a class="mobile" href="tel:9876543210">(987) 654-3210</a></p>
+            <p>Email Address <br><br>
+           <a href="mailto:travel@travel.net">
+        travel@travel.net</a></p>
+            <br><br>
+     
+        </main>
+        
+        
+
+
+    <footer>
+        &copy; Copyright 2019. All Rights Reserved.<br>
+        <a href="mailto:travel@travel.net">
+        travel@travel.net</a>
+    </footer>
+    </div>
+       
+           <script>
+               var ctr = 0;
+               var localId,localFname,localLname,localEmail,localPhone,localAddres, localQues;
+               var regLink = document.getElementById("regLink");
+               regLink.style.visibility = 'visible';
+                              regLink.innerHTML = "Register here";
+                   function checkUser()
+               {
+                       console.log(window.localStorage.getItem("logged_in"));
+               if(window.localStorage.getItem("logged_in") == "true")
+                   {
+                       console.log(window.localStorage.getItem("current_user"));
+                       regLink.innerHTML = window.localStorage.getItem("current_user");
+                       regLink.removeAttribute('href');                   
+                   }
+                   console.log("in Check User function");
+                   document.getElementById("logout").innerHTML = "Logout";
+                
+               }
+               $("#logout").click(function()
+                                 {
+                                  document.getElementById("logout").style.visibility = 'hidden';
+                                  alert("Logged out successfully");
+                                  regLink.innerHTML = "Register here";
+                                  regLink.setAttribute('href','reg.html');
+                                  window.localStorage.setItem("current_user","");
+                                  });
+               
+               $("#contact").submit(function(e)
+                                   {
+    var submitBtn = document.getElementById("sumbitReq");
+    var form = document.getElementById("Contact");;
+    var div = document.getElementById("listDiv");
+    var req = document.getElementById("listOfReq");
+                   e.preventDefault();
+                   alert("Hello");
+                   console.log("Hello");
+                   var dict = {
+                                  id: window.localStorage.getItem(ctr),
+                                  fname: document.getElementById("fName").value,  
+                                  lname: document.getElementById("lName").value,   
+                                  email: document.getElementById("email").value,   
+                                  phone: document.getElementById("phone").value,   
+                                  address: document.getElementById("address").value,
+                                  question: document.getElementById("questions").value,
+                                };
+                   window.localStorage.setItem(ctr,JSON.stringify(dict));
+                   ctr++;
+                   window.localStorage.setItem("ctr",ctr);
+                   });
+              
+    </script> 
+</body>
+</html>

@@ -1,0 +1,92 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/regstyles.css">
+    <title>Document</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+<div id="container">
+  <header>
+      <a href="index.html"><img src="logo.png" width="200px" height="auto" alt="travel logo"> </a>  
+  </header>
+
+    <nav id="nav">
+        <ul>  <br><br>
+          <li> <a href="home.html"> Home </a>&nbsp; &nbsp;</li>
+           <li><a href="service.html">Services</a> &nbsp;&nbsp;</li>
+          <li><a href="about.html">About us</a> &nbsp;&nbsp;</li>
+          <li><a href="contact.html">Contact Us</a> &nbsp;&nbsp;</li>
+          
+      </ul>
+    </nav>
+    
+    
+
+    <main><br>
+        <form style="border:1px solid #ccc">
+  <div class="container">
+    <h1>Sign In</h1>
+    <p>Please enter the credentials.</p>
+    <hr>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="pwd" required>
+
+    
+
+    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
+
+    
+
+    <div class="clearfix">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="submit" class="signinbtn" id="submit">Sign in</button>
+    </div>
+  </div>
+</form>
+    </main>
+
+    <footer>
+        &copy; Copyright 2019. All Rights Reserved.<br>
+        <a href="mailto:travel@travel.net">
+        travel@travel.net</a>
+    </footer>
+    </div>
+       
+            
+              <script>
+           $('#submit').click(function(e)
+                             {
+                              e.preventDefault();
+           var flag = 0;
+           for (var key in window.localStorage){
+               if(document.getElementById("email").value == key )
+                   {
+                       if(document.getElementById("pwd").value == window.localStorage.getItem(key))
+                           {
+                               alert("Logged in successfully");
+                               window.localStorage.setItem("logged_in",true);
+                    window.localStorage.setItem("current_user",document.getElementById("email").value);
+                               break;
+                           }
+                           
+                   }
+                    console.log(key);
+               console.log("VALUE:");
+                    console.log(window.localStorage.getItem(key));
+           }
+           }
+                             );
+    </script>
+            
+</body>
+</html>

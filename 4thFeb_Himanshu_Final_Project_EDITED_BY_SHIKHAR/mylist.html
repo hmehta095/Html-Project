@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <link rel="stylesheet" href="css/style.css">
+    <title>My List</title>
+</head>
+<body>
+<div id="container">
+  <header>
+      <a href="index.html"><img src="logo.png" width="200px" height="auto" alt="travel logo"> </a>  
+  
+
+    <nav id="nav">
+        <ul>  <br><br>
+          <li> <a href="home.html"> Home </a>&nbsp; &nbsp;</li>
+         
+      </ul>
+    </nav>
+    </header>
+    
+     
+    
+    <main> 
+      <h3>All the request made are listed below</h3>
+      <h3>Hotel Queries</h3>
+         
+       <ul id="requestListHotel">
+       <li></li>
+       </ul>
+      <h3>Flight Queries</h3>        
+         
+       <ul id="requestListFlight">
+       </ul>
+      <h3>Guide Queries</h3>
+         
+       <ul id="requestListLocal">
+       </ul>
+        </main>
+        
+        
+
+
+    <footer>
+        &copy; Copyright 2019. All Rights Reserved.<br>
+        <a href="mailto:travel@travel.net">
+        travel@travel.net</a>
+    </footer>
+    </div>
+
+            <script>
+                var ctr = window.localStorage.getItem("ctr");
+                var ul = document.getElementById("requestListHotel");
+                for(var i = 0; i<ctr;i++)
+                    {
+                        var text =JSON.parse(window.localStorage.getItem(i));
+                        var li = document.createElement("li");
+                        li.append("Name: "+" "+text["fname"]+" "+text["lname"]+" ");
+                        ul.appendChild(li);
+                        var liTwo = document.createElement("li");
+                        liTwo.append("Total number of visitors: "+text["vname"]);
+                        ul.appendChild(liTwo);
+                        ul.append("Number of Rooms: ");
+                        ul.append(" "+text["rooms"]);
+                    }
+    </script>
+</body>
+</html>

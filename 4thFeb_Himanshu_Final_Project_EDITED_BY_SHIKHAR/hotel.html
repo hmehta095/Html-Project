@@ -1,0 +1,128 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <link rel="stylesheet" href="css/style.css">
+    <title>Hotel Booking</title>
+</head>
+<body>
+<div id="container">
+  <header>
+      <a href="index.html"><img src="logo.png" width="200px" height="auto" alt="travel logo"> </a>  
+  
+
+    <nav id="nav">
+        <ul>  <br><br>
+          <li> <a href="home.html"> Home </a>&nbsp; &nbsp;</li>
+          
+          
+      </ul>
+    </nav>
+    </header>
+    
+     
+    
+    <main> 
+       <form>
+       <h4>Enter the detail to book the room:</h4>
+      First Name: <input type="text" name="fName" placeholder="Enter name" id="fname"> <br> <br>
+      Last Name: <input type="text" name="lName" placeholder="Enter last name" id="lname"> <br> <br>
+
+      Hotel Name: <select name="hname" id ="hname">
+        <option value="Taj">The Taj Hotel</option>
+        <option value="Aroma">The Aroma Toronto</option>
+        <option value="KCM">The KCM Verity</option>
+      </select> <br> <br>
+
+      
+      Total number of visitors: <select name="vname" id="vname">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+      </select><br> <br>
+      
+      1-Room <input type="radio" name="roomType" value="single"><br> 
+      2-Room <input type="radio" name="roomType" value="double"><br> 
+      3-Room <input type="radio" name="roomType" value="triple"><br> 
+      4-Room <input type="radio" name="roomType" value="quad"> <br> <br>
+
+      
+
+      <h3>CheckIn Date:</h3>
+      <input type="date" name="CIdate">
+
+
+      <h3>CheckOut Date:</h3>
+     <input type="date" name="COdate"> <br> <br>
+
+      
+
+
+       <textarea name="textarea" rows="8" cols="80" placeholder="Any Note"></textarea> <br>
+       
+       <button type="submit" name="submit">Submit</button>
+    </form>
+        </main>
+        
+        
+
+
+    <footer>
+        &copy; Copyright 2019. All Rights Reserved.<br>
+        <a href="mailto:travel@travel.net">
+        travel@travel.net</a>
+    </footer>
+    </div>
+       <script>
+    
+    var selectedRoom;
+    var fname = document.getElementById("fname");
+    var lname = document.getElementById("lname");;
+    var hname = document.getElementById("hname");
+    var vname = document.getElementById("vname");
+    var rooms = document.getElementsByName("roomType");
+    var ciDate = document.getElementsByName("CIdate");
+    var coDate = document.getElementById("COdate");
+           for(var i =0, length = coDate.length; i<length;i++)
+               {
+                   if(rooms[i].checked)
+                       {
+                           selectedRoom = rooms[i].value;
+                       }
+               }
+           
+           var hoter_counter = window.localStorage.getItem("hotel_services_counter");
+           if(window.localStorage.getItem("hotel_services_counter") > 0)
+           {
+                                  e.preventDefault();
+                   var dict = {
+                                  id: window.localStorage.getItem("current_user"),
+                                  entryType : "Hotel Entry",
+                                  fname: document.getElementById("fname").value,  
+                                  lname: document.getElementById("lname").value,   
+                                  hname: document.getElementById("hname").value,   
+                                  vname: document.getElementById("vname").value,   
+                                  rooms: document.getElementById("rooms").value,
+                                  ciDate: document.getElementById("CIdate").value,
+                                  coDate: document.getElementById("COdate").value,
+                                };
+                   window.localStorage.setItem(ctr,JSON.stringify(dict));
+                   window.localStorage.setItem("hotel_ services_counter",hoter_counter++);
+           
+                                  });
+           }
+           else
+               {
+               window.localStorage.setItem("hotel_services_counter",0;)                   
+               }
+
+              
+    </script>
+            
+</body>
+</html>
